@@ -1,0 +1,99 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap'); */
+
+* {    /* *=Universal Selector */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {    /* centralize screen */
+    min-height: 100vh; /* Viewport Height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fddcc358;
+}
+
+.mainFlex {    /* centralize mainFlex */
+    min-height: 100vh; /* Viewport Height */
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftDiv {
+    width: 50%;;
+    height: 600px;
+    border-radius: 8px;
+    /* background-image: url("sports.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background: url("sports.jpg") no-repeat center / cover; /* Background image shorthand */
+}
+
+.rightDiv {
+    width: 50%;
+    max-height: 400px;
+    background-color: #2f3d3c;
+    margin-left: -150px; /* here's howw to get a div overlap! */
+    border-radius: 8px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightContent h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.rightContent p {
+    font-weight: 500;
+    line-height: 25px;
+    margin: 20px 0px;    
+}
+
+.rightContent a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    display: inline-block; /* allows width & height to be set on an element */
+    letter-spacing: 2px;
+}
+
+
+/************************************
+*** Media Responsive Zone 
+************************************/
+
+@media only screen and [max-width: 768px] {
+    .mainFlex {
+        flex-direction: row;
+        width: 100%;
+        margin: 0 20px;
+    }
+    
+    .leftDiv {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .rightDiv {
+        width: 80%;
+        margin: 0;
+        margin-top: -100px;
+    }
+}
+
+
